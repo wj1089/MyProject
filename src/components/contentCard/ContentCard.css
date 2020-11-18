@@ -1,0 +1,22 @@
+.WP_imgSize{
+    width: 100%;
+    height: 25vh;
+    background-color: darkgrey;
+}
+
+
+.WP_sectionimgs{
+    display: inline-block;
+    padding: 0;
+    background-color: cornsilk;
+    margin-left: 1vh;
+    height: 35vh;
+    width: 22vh;
+
+}
+.WP_contentText{
+    width: 22.5vh;
+    padding: 1vh;
+}
+
+
