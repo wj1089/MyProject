@@ -5,7 +5,7 @@ function ReviewCard (props)  {
     return (
             <div className="inSide_slide">
                 <div className="slide_img">
-                    {/* <img src={props.reviewInfor.imgUrl} /> */}
+                    <img src={props.reviewInfor.imgUrl} />
                 </div>
 
                 <div className="slide_icon">

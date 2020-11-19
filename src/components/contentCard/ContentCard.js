@@ -8,7 +8,7 @@ function ContentCard(props) {
     console.log(props);
     // 
 
-    ci
+    
     return (
                 <div className="WP_sectionimgs">
                    

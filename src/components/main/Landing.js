@@ -1,10 +1,11 @@
 import React, {useState,useEffect,useRef} from 'react';
 import {useHistory} from 'react-router-dom'
-import { ReviewCard } from '../contentCard';
-// import DownImg from '../navigation/DownImg';
+import { HotTrack, ReviewCard } from '../contentCard';
 import MenuBar from '../navigation/MenuBar';
 import './Landing.css'
-// import whitedog from '../../resource/whitedog.png'
+import '../contentCard/ContentCard.css'
+// import DownImg from '../navigation/DoxwnImg';
+
 
 const Landing = () => {
     const history = useHistory();
@@ -125,15 +126,15 @@ const Landing = () => {
                 <div className="outSide_Image_3">      
 
                     <div className="section_container_3">
-                    <div className="thirdPage_thuimnail">
-                                <p className="font1">
-                                    #아이그레<br/>
-                                    Review
-                                </p>
-                                <p className="font2">
-                                            실제 정기배송을 이용한 <br/>
-                                            고객님들의 후기입니다 
-                                </p>
+                        <div className="thirdPage_thuimnail">
+                                    <p className="font1">
+                                        #아이그레<br/>
+                                        Review
+                                    </p>
+                                    <p className="font2">
+                                                실제 정기배송을 이용한 <br/>
+                                                고객님들의 후기입니다 
+                                    </p>
                         </div>
 
                         {/* 리뷰카드 슬라이드 */}
@@ -150,7 +151,7 @@ const Landing = () => {
                         </div>
 
                         {/* 다운버튼 */}
-                        <button className="section_link_2" onClick={()=>{history.push('/WidePage')}}>
+                        <button className="section_link_3" onClick={()=>{history.push('/WidePage')}}>
                             <span>
                                 {/* 2번섹션기능 중복사용 */}
                                 <a className="size2">
@@ -165,20 +166,50 @@ const Landing = () => {
 
                 {/*  네번째 페이지 */}
                 <section className="fbp hotmenu" data-title="Hotmenu">
+                
+
                 <div className="section_container_4">
                     <div className="fourthPage_thuimnail">
-                    <div className="thirdPage_thuimnail">
-                                <p className="font1">
-                                #인기상품<br/>
+                        <p className="font1">#인기상품<br/></p>
+                        <p className="font2">
+                        아이그레가 자신있게<br/>
+                        추천드리는 상품입니다.
+                        </p>
+
+                        <button className="HT_btn">더보기</button>
+                    </div>
+
+                    <div className="HT_sectionarea">
+                                {/* 각 컨텐츠 */}
+
+                                <HotTrack 
+                                    contentInfor={{name:"John", imgUrl:"sea.jpg", text:"first content"}}
+                                />
+
+                                <HotTrack 
+                                    contentInfor={{name:"Kerry", imgUrl:"sea.jpg",  text:"first content"}}
+                                />
                                 
-                                
-                                </p>
-                                <p className="font2">
-                                아이그레가 자신있게<br/>
-                                추천드리는 상품입니다.
-                                </p>
-                        </div>
-                        <button className="section_link_2" onClick={()=>{history.push('/WidePage')}}>
+                                <HotTrack 
+                                    contentInfor={{name:"Jenna", imgUrl:"sea.jpg", text:"first content"}}
+                                />
+
+                                <HotTrack 
+                                    contentInfor={{name:"Alexender", imgUrl:"sea.jpg", text:"first content"}}
+                                />
+                                <HotTrack 
+                                    contentInfor={{name:"Kerry", imgUrl:"sea.jpg", text:"first content"}}
+                                />
+
+                                <HotTrack 
+                                    contentInfor={{name:"Walter", imgUrl:"sea.jpg", text:"first content"}}
+                                />
+
+                            </div>
+
+                    <div className="outSide_Image_4">      
+
+                        <button className="section_link_4" onClick={()=>{history.push('/WidePage')}}>
                             <span>
                                 {/* 2번섹션기능 중복사용 */}
                                 <a className="size2">
@@ -213,6 +244,8 @@ const Landing = () => {
                                             이용해보세요 <br/>
                                 </p>
                         </div>
+                        
+                        
                         {/* 1번섹션기능 중복사용 */}
                         <button className="section_link_1" onClick={()=>{history.push('/WidePage')}}> 
                         앱 다운로드

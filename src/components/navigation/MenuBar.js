@@ -1,6 +1,5 @@
 import React from 'react';
 import '../main/Landing.css'
-import Landing from '../main/Landing'
 import logo from '../../resource/logo.png'
 import { useHistory } from 'react-router-dom';
 
