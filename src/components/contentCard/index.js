@@ -1,7 +1,6 @@
 import ContentCard from "./ContentCard";
-
-import ContentCard from './ContentCard'
+import ReviewCard from './ReviewCard';
 
 export{
-    ContentCard
+    ContentCard,ReviewCard
 }

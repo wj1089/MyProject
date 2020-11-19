@@ -1,8 +1,10 @@
 import React, {useState,useEffect,useRef} from 'react';
 import {useHistory} from 'react-router-dom'
+import { ReviewCard } from '../contentCard';
 // import DownImg from '../navigation/DownImg';
 import MenuBar from '../navigation/MenuBar';
 import './Landing.css'
+// import whitedog from '../../resource/whitedog.png'
 
 const Landing = () => {
     const history = useHistory();
@@ -10,6 +12,7 @@ const Landing = () => {
     const [canScroll, setCanScroll] = useState(true);
     const sectionTitle = [ 'Main', 'Delivery', 'Review','Hotmenu','Downintro' ];
     const mainContent = useRef();
+    
 
     useEffect(() => {        
         scrollContent(spinIndex);
@@ -64,7 +67,10 @@ const Landing = () => {
                 {/* 첫번째 페이지 */}
                 <section className="fbp main" data-title="Main">
 
-                {/* <DownImg/> */}
+                {/* OutSide Image */}
+                <div className="outSide_Image">      
+
+                {/* <DownImg/> (보류)*/}
 
                     <div className="section_container">
                         <div className="fistPage_thuimnail">
@@ -77,6 +83,11 @@ const Landing = () => {
                         <button className="section_link_1" onClick={()=>{history.push('/WidePage')}}>
                             앱 다운로드
                         </button>
+                    </div>
+
+                    <div className="inSide_Img">
+                        <p>hello</p>
+                    </div>
                     </div>
                 </section>
 
@@ -109,18 +120,36 @@ const Landing = () => {
 
                 {/* 세번째 페이지 */}
                 <section className="fbp review" data-title="Review">
+
+                {/* outSide_Image_5 */}
+                <div className="outSide_Image_3">      
+
                     <div className="section_container_3">
                     <div className="thirdPage_thuimnail">
                                 <p className="font1">
                                     #아이그레<br/>
                                     Review
-                                
                                 </p>
                                 <p className="font2">
                                             실제 정기배송을 이용한 <br/>
                                             고객님들의 후기입니다 
                                 </p>
                         </div>
+
+                        {/* 리뷰카드 슬라이드 */}
+                        <div className="revSlide">
+                            <ReviewCard
+                                reviewInfor={{review:"슬라이드 설명란"}}
+                            />
+                            <ReviewCard
+                                reviewInfor={{imgUrl:"sea.jpg", review:"슬라이드 설명란"}}
+                            />
+                            <ReviewCard
+                                reviewInfor={{imgUrl:"sea.jpg", review:"슬라이드 설명란"}}
+                            />
+                        </div>
+
+                        {/* 다운버튼 */}
                         <button className="section_link_2" onClick={()=>{history.push('/WidePage')}}>
                             <span>
                                 {/* 2번섹션기능 중복사용 */}
@@ -130,6 +159,7 @@ const Landing = () => {
                                 </a>
                             </span>
                         </button>
+                        </div>
                     </div>
                 </section>
 
@@ -162,7 +192,15 @@ const Landing = () => {
                 </section>
 
                 {/* 다섯번째 페이지 */}
+
+
+                {/* OutSide Image */}
+
+                
+
                 <section className="fbp downintro" data-title="Downintro">
+                <div className="outSide_Image_5">      
+
                     <div className="section_container_5">
                         <div className="fifthPage_thuimnail">
                                 <p className="font1">
@@ -175,45 +213,51 @@ const Landing = () => {
                                             이용해보세요 <br/>
                                 </p>
                         </div>
-
                         {/* 1번섹션기능 중복사용 */}
                         <button className="section_link_1" onClick={()=>{history.push('/WidePage')}}> 
                         앱 다운로드
                         </button>
 
-                        {/* 풋터*/}
-                        <footer className="full_footer">
-                                <div className="footer_down">
-                                    <p className="underword">
-                                        (주)모리아타운<br/>
-                                        05854 서울특별시 송파구 법원로 114(문정동) B동 915호
-                                    </p>
-                                        <br/>
+                        <div className="inSide_Img_5">
+                            <p>footer</p>
+                        </div>
+                        
 
-                                    <p className="underword">
-                                        대표자:권오형 ㅣ 개인정보관리: 정원석
-                                    </p>
-                                        <br/>
+                    {/* 풋터*/}
+                    <footer className="full_footer">
+                            <div className="footer_down">
+                                <p className="underword">
+                                    (주)모리아타운<br/>
+                                    05854 서울특별시 송파구 법원로 114(문정동) B동 915호
+                                </p>
+                                    <br/>
 
-                                    <p className="underword">
-                                        사업자번호:000-00-00000 <br/>
-                                        통신판매업 신고 : 0000-서울송파-0000호 (통신판매업조회)
-                                    </p>
-                                        <br/>
-                                        
-                                    <p className="underword">
-                                        서비스관련 문의/입점문의<br/>
+                                <p className="underword">
+                                    대표자:권오형 ㅣ 개인정보관리: 정원석
+                                </p>
+                                    <br/>
 
-                                        대표전화 : 0000-0000 <br/>
-                                        대표메일 : abc123@moriahtown.com<br/>
-                                    </p>
-                                        <br/>
-                                    <p className="underword">
-                                        @2020 Moriahtown. All Rights Reserved.
-                                    </p>
-                                </div>       
-                        </footer>
+                                <p className="underword">
+                                    사업자번호:000-00-00000 <br/>
+                                    통신판매업 신고 : 0000-서울송파-0000호 (통신판매업조회)
+                                </p>
+                                    <br/>
+                                    
+                                <p className="underword">
+                                    서비스관련 문의/입점문의<br/>
+
+                                    대표전화 : 0000-0000 <br/>
+                                    대표메일 : abc123@moriahtown.com<br/>
+                                </p>
+                                    <br/>
+                                <p className="underword">
+                                    @2020 Moriahtown. All Rights Reserved.
+                                </p>
+                            </div>       
+                    </footer>
                     </div>
+                    </div>
+
                 </section>
 
             </div>
