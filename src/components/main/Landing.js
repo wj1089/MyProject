@@ -1,6 +1,6 @@
 import React, {useState,useEffect,useRef} from 'react';
 import {useHistory} from 'react-router-dom'
-import DownImg from '../navigation/DownImg';
+// import DownImg from '../navigation/DownImg';
 import MenuBar from '../navigation/MenuBar';
 import './Landing.css'
 
