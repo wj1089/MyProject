@@ -1,20 +1,25 @@
 import React, {useState,useEffect,useRef} from 'react';
 import {useHistory} from 'react-router-dom'
-import { HotTrack, ReviewCard } from '../contentCard';
+import { HotTrack } from '../contentCard';
 import MenuBar from '../navigation/MenuBar';
+import ReviewCard from '../contentCard/ReviewCard.js';
+import SlideBtn from '../navigation/SlideBtn.js'
 import './Landing.css'
-import '../contentCard/ContentCard.css'
-// import DownImg from '../navigation/DoxwnImg';
+import '../contentCard/ContentCard.css';
 
+
+// import DownImg from '../navigation/DoxwnImg';
+const TOTAL_SLIDE = 4;
 
 const Landing = () => {
+
     const history = useHistory();
     const [spinIndex, setSpinIndex] = useState(0);
     const [canScroll, setCanScroll] = useState(true);
     const sectionTitle = [ 'Main', 'Delivery', 'Review','Hotmenu','Downintro' ];
     const mainContent = useRef();
     
-
+//main 스크롤
     useEffect(() => {        
         scrollContent(spinIndex);
         console.log(spinIndex)
@@ -53,7 +58,34 @@ const Landing = () => {
         ');
     };
 
+// section3 슬라이더
     
+
+// const [currentSlide, setCurrentSilde] = useState(0);
+// const slideRef = useRef(null);
+
+
+// const slideBtn_R =()=>{
+//     if(currentSlide >= TOTAL_SLIDE){
+//         setCurrentSilde(0);
+//     } else {
+//         setCurrentSilde(currentSlide + 1);
+//     }
+// };
+
+// const slideBtn_L =() =>{
+//     if(currentSlide === 0){
+//         setCurrentSilde(TOTAL_SLIDE);
+//                 }else{
+// setCurrentSilde(currentSlide-1);
+//     }
+// };
+
+// useEffect(()=>{
+//     slideRef.current.transition ="all 0.5s ease-in-out";
+//     slideRef.current.trsform = `translateX(-${currentSlide}00%)`;
+// }, [currentSlide]);
+
 
 
     return (
@@ -132,22 +164,42 @@ const Landing = () => {
                                         Review
                                     </p>
                                     <p className="font2">
-                                                실제 정기배송을 이용한 <br/>
-                                                고객님들의 후기입니다 
+                                        실제 정기배송을 이용한 <br/>
+                                        고객님들의 후기입니다 
                                     </p>
                         </div>
 
                         {/* 리뷰카드 슬라이드 */}
                         <div className="revSlide">
+                        {/* {currentSlide} */}
+
                             <ReviewCard
-                                reviewInfor={{review:"슬라이드 설명란"}}
+                                reviewInfor={{
+                                    imgUrl:"https://lh3.googleusercontent.com/proxy/owdwckDRadaf9RTTvxSzhoPLC2xy61B_Iw3X1o13ezxJIeEI27-ZYio0dIMkMcz9nTXDHqInHzhThm1jnxGlePTa5Kr57ZhqSkyV-3LA8Ks1C5MJg8UfwpyzLzmfzu_6hZ0LArI8NQdA4gyUWZuuzKt4BpBBoKad0EV0Eeyiox6oCSoPE88zY7mV6XeDYTiloPAKYs7hrLjp4fCUPOPSavLBZYooGOj_hytHC3yI0iJ6779pP0XPoJI4zgWq4VFFVohEApZVT7BZh2BjBPe0UDHfJjoVyfJ9A5jGMw89VA",
+                                    review:"슬라이드 설명란"}}
                             />
+                            
                             <ReviewCard
-                                reviewInfor={{imgUrl:"sea.jpg", review:"슬라이드 설명란"}}
-                            />
+                                reviewInfor={{
+                                    imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk947s--HqgeZk3Mtm4DSzvl5qGISexz0wKQ&usqp=CAU",
+                                    review:"슬라이드 설명란"}}
+                                />
                             <ReviewCard
-                                reviewInfor={{imgUrl:"sea.jpg", review:"슬라이드 설명란"}}
-                            />
+                                reviewInfor={{
+                                    imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwIfVA1gedjl4srs_cRj60gbybmruU3QiZw&usqp=CAU",
+                                    review:"슬라이드 설명란"}}
+                                />
+                            <ReviewCard
+                                reviewInfor={{
+                                    imgUrl:"https://lh3.googleusercontent.com/proxy/owdwckDRadaf9RTTvxSzhoPLC2xy61B_Iw3X1o13ezxJIeEI27-ZYio0dIMkMcz9nTXDHqInHzhThm1jnxGlePTa5Kr57ZhqSkyV-3LA8Ks1C5MJg8UfwpyzLzmfzu_6hZ0LArI8NQdA4gyUWZuuzKt4BpBBoKad0EV0Eeyiox6oCSoPE88zY7mV6XeDYTiloPAKYs7hrLjp4fCUPOPSavLBZYooGOj_hytHC3yI0iJ6779pP0XPoJI4zgWq4VFFVohEApZVT7BZh2BjBPe0UDHfJjoVyfJ9A5jGMw89VA",
+                                    review:"슬라이드 설명란"}}
+                                />
+                        
+                            <ReviewCard
+                                reviewInfor={{
+                                    imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk947s--HqgeZk3Mtm4DSzvl5qGISexz0wKQ&usqp=CAU",
+                                    review:"슬라이드 설명란"}}
+                                />
                         </div>
 
                         {/* 다운버튼 */}
@@ -178,31 +230,46 @@ const Landing = () => {
 
                         <button className="HT_btn">더보기</button>
                     </div>
+                    <SlideBtn/>
 
                     <div className="HT_sectionarea">
-                                {/* 각 컨텐츠 */}
+                                
+                                {/* 슬라이드 버튼 */}
 
+                                {/* 각 컨텐츠 */}
                                 <HotTrack 
-                                    contentInfor={{name:"John", imgUrl:"sea.jpg", text:"first content"}}
+                                    contentInfor={{name:"Apple", 
+                                    imgUrl:"https://t1.daumcdn.net/cfile/tistory/18614A3C4FC857C32D", 
+                                    text:"first content"}}
                                 />
 
                                 <HotTrack 
-                                    contentInfor={{name:"Kerry", imgUrl:"sea.jpg",  text:"first content"}}
+                                    contentInfor={{name:"Berry", 
+                                    imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_nN0dcvrM4jttfdeFEbEkpqhqcrEfaROzg&usqp=CAUsea.jpg",  
+                                    text:"first content"}}
                                 />
                                 
                                 <HotTrack 
-                                    contentInfor={{name:"Jenna", imgUrl:"sea.jpg", text:"first content"}}
+                                    contentInfor={{name:"Water Melon", 
+                                    imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIXb2c49z6CLtiIPE3znpTYp9F-EBNB6MwCg&usqp=CAU", 
+                                    text:"first content"}}
                                 />
 
                                 <HotTrack 
-                                    contentInfor={{name:"Alexender", imgUrl:"sea.jpg", text:"first content"}}
+                                    contentInfor={{name:"Grape", 
+                                    imgUrl:"https://ml0kkrxew41d.i.optimole.com/g0hcq7Y-SzXT3ega/w:auto/h:auto/q:55/http://chicagokoreatimes.com/wp-content/uploads/2019/12/CKO2019-12-27A011.jpg", 
+                                    text:"first content"}}
                                 />
                                 <HotTrack 
-                                    contentInfor={{name:"Kerry", imgUrl:"sea.jpg", text:"first content"}}
+                                    contentInfor={{name:"Pear", 
+                                    imgUrl:"https://previews.123rf.com/images/kaiskynet/kaiskynet1509/kaiskynet150900198/45558011-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD-%EC%9C%84%EC%97%90-%EB%B0%B0-%EA%B3%BC%EC%9D%BC.jpgsea.jpg", 
+                                    text:"first content"}}
                                 />
 
                                 <HotTrack 
-                                    contentInfor={{name:"Walter", imgUrl:"sea.jpg", text:"first content"}}
+                                    contentInfor={{name:"Cherry", 
+                                    imgUrl:"https://image.news1.kr/system/ap/2017/6/30/2615114/dims/optimizec", 
+                                    text:"first content"}}
                                 />
 
                             </div>

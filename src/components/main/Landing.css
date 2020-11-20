@@ -166,7 +166,7 @@ h1 {
 	position: fixed;
 	background-color: rgba(255,255,255,0.77);
 	right: 40px;
-	top: calc(50% + 55px);
+	top: calc(80% + 55px);
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
@@ -467,37 +467,15 @@ h1 {
 /* 내부 후기카드 */
 .revSlide{
 	position: absolute;
-	display: flex;
-	left: 18vw;
-	bottom: 24vh;
-	width: 55vw;
+	width: 54vw;
 	height: 40vh;
-
+	left: 20vw;
+	bottom: 24vh;
+	display: flex;
+	overflow: hidden;
 }
-.inSide_slide{
-	position: relative;
-	width: 30vw;
-	height: 38vh;
-	border-radius: 16px;
-	margin: 0 0 0 15px;
-	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-	background-color: white;
-	border:1px solid black
 
-}
-.slide_img{
-	background-color: rgb(245, 241, 241);
-	width: 10vw;
-	height: 15vh;
-	margin-top:1vh;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	text-align: center;
-	border-radius: 10px;
 
-}
 .slide_icon{
 	background-color: rgb(66, 162, 201);
 	margin-top:1vh;
@@ -634,14 +612,15 @@ h1 {
 .HT_sectionarea{
     position: absolute;
 	display: flex;
+	overflow: hidden;
 	z-index: 1;
-    width: 70vw;
+    width: 60vw;
     height: 40vh;
-	left: 40%;
+	left: 26vw;
 	top:10vh;
     padding: 1vh 1vh;
 	background-color: rgb(198, 240, 241);
-	justify-content: space-between;
+	/* justify-content: space-between; */
 }
 
 

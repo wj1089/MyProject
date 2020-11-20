@@ -1,5 +1,6 @@
 import MenuBar from './MenuBar';
-import SideNav from './SideNav';
+import Slide from './Slide'
+
 export {
-    MenuBar, SideNav
+    MenuBar, Slide
 }

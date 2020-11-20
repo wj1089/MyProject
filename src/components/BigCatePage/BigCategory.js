@@ -4,7 +4,7 @@ import '../main/Landing.css';
 import { useHistory } from 'react-router-dom';
 
 import MenuBar from '../navigation/MenuBar';
-import SideNav from '../navigation/SideNav';
+// import SideNav from '../navigation/SideNav';
 
 
 const BigCategory = () => {
@@ -25,7 +25,7 @@ const BigCategory = () => {
                 
                 {/* 사이드바 */}
                     <div className="BC_sidenav">
-                        <SideNav/>
+                        {/* <SideNav/> */}
                     </div>
 
                 {/* 전체 메인영역 */}

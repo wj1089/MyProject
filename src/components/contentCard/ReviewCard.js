@@ -1,11 +1,14 @@
 import React from 'react';
+import './ContentCard.css';
+
+
 
 function ReviewCard (props)  {
     console.log(props)
     return (
             <div className="inSide_slide">
                 <div className="slide_img">
-                    <img src={props.reviewInfor.imgUrl} />
+                    <img className="imgSize" src={props.reviewInfor.imgUrl}/>
                 </div>
 
                 <div className="slide_icon">
