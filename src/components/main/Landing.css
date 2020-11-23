@@ -22,39 +22,39 @@ header {
 	padding: 0 15px;
 	color: #030303;
 	background-color: #ffff;
-	opacity: 0.5;
 	display: inline-block;
 
 }
 
 /* 상단메뉴바 */
 .nav_menubar{
+	height: 10vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
     list-style: none; 
 	padding-left: 0;
 	background-color: white;
-	padding: 8px 12px;
-	height: 6vh;
-	padding: 12.5px 48px 11.5px;
+	/* opacity: 0.1; */
+
 }
 
 .nav_menubar li :hover{
 	background-color: #d49466;
 	border-radius: 10px;
+
 }
 .nav_menu{
-	width: 40vw;
+	width: 20vw;
 	display: flex;
 	list-style: none;
 	padding-right: 5%;
-	padding: 8px 30px;
+	padding: 8px 15px;
 
 }
 
 .nav_menu li{
-	width: 10vw;
+	width: 7vw;
 	height: 45px;
 	margin:4px 14px 5px 5%;
 	font-family: NotoSansKR;
@@ -72,14 +72,17 @@ header {
 
 .one{
 	width: 10vh;
-	font-size: 1.7vh;
+	font-size: 1vw;
+	font-weight: 900;
+	color: black;
 	
 }
 .two{
 	width: 10vh;
-	font-size: 1.7vh;
+	font-size: 1vw;
 	font-weight: bolder;
-	
+	color: black;
+
 }
 
 
@@ -195,9 +198,11 @@ h1 {
 	-o-transition: border 0.26s ease-in-out;
 	transition: border 0.26s ease-in-out;
 }
+
 .section_button.active::after {
 	border-color: #404040;
 }
+
 .section_button span {
 	position: absolute;
 	visibility: hidden;
@@ -237,6 +242,7 @@ h1 {
 .font1{
 	font-size: 3vw;
 	font-weight: 700;
+	color: black;
 }
 
 
@@ -247,28 +253,29 @@ h1 {
 .outSide_Image{
 	position: absolute;
 	width: 80vw;
-	height: 61.5vh;
+	height: 80vh;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	background-color : rgb(241, 207, 227);
+	background-color : #ffc4b5;
 	border-radius: 7vh;
 
 }
 
 .inSide_Img{
+	position: absolute;
 	width: 28vw;
 	height: 55.5vh;
-	top: 6vh;
+	top: 24.5vh;
 	right: 14vw;
-	position: absolute;
+	border:1px solid black;
+	border-radius: 2.8vw 2.8vw 0 0;
 	background-color: white;
-	border:1px solid black
 }
 
 .section_container {
-	bottom: 10vh;
+	bottom: 23vh;
 	left: 17vh;
 	position: absolute;
 	width: 62vh;
@@ -292,14 +299,17 @@ h1 {
 	text-align: left;
 }
 .fistPage_thuimnail .font2{
-	font-size: 1.7vw;
+	font-size: 38px;
+	font-weight: 900;
 	margin-top: 1.5vh;
+	color: black;
+
 }
 
 
 .section_link_1 {
-	margin-top: 4vh;
-	color: rgb(0, 0, 0);
+	margin-top: 6vh;
+	color: white;
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 1.2vh 3vw;
@@ -307,8 +317,8 @@ h1 {
 	font-weight: 500;
 	letter-spacing: 0.1vw;
 	line-height: 1;
-	border: 0.2vw solid rgba(0, 0, 0, 0.56);
-	background-color: rgba(250,250,250,0.07);
+	border: 0.1vw solid rgba(0, 0, 0, 0.56);
+	background-color: #4a7755;
 	border-radius: 0.5vw;
 	display: inline-block;
 	-webkit-transition: border 0.1s ease-in-out;
@@ -325,19 +335,28 @@ h1 {
 /* 2페이지 ----------------------------------------------------*/
 
 .delivery {
-	background-color: darkturquoise;
+	background-color: white;
 }
 
+.outSide_Image2{
+	position: absolute;
+	width: 80vw;
+	height: 80vh;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	background-color : #ffc4b5;
+	border-radius: 7vh;
+
+}
 
 .section_container_2 {
 	width: 113vh;
-	height: 75vh;
-	max-width: 100%;
-	margin: 10vh auto;
-	margin-top: 10vh;
+	height: 68vh;
+	margin: auto;
 	padding: 15vh 0;
 	overflow: hidden;
-	margin-top: 22vh;
+	margin-top: 15vh;
 	color: #fff;
 }
 .right .section_container {
@@ -360,14 +379,23 @@ h1 {
 .secondPage_thuimnail .font2{
 	font-size: 2vh;
 	margin-top: 3vh;
-}
+	color: black;
+	
 
+}
+.secondPage_thuimnail .font1-2{
+	font-size: 46px;
+	margin-top: 1.5vh;
+	color: black;
+	font-weight: 900;
+}
 
 .section_link_2 {
 	position: relative;
-	left: 40vh;
-	width: 30vh;
-	top: 25vh;
+	top: 22vh;
+	left: 52vh;
+	width: 11vw;
+	height: 13vh;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
@@ -377,9 +405,9 @@ h1 {
 	font-weight: 500;
 	letter-spacing: 1px;
 	line-height: 1;
-	border: 3px solid #fff;
-	background-color: rgba(0, 0, 0, 0.07);
-	border-radius: 35px;
+	border: 3px solid #4a7755;
+	background-color: #4a7755;
+	border-radius: 8px;
 	display: inline-block;
 	-webkit-transition: border 0.1s ease-in-out;
 	-o-transition: border 0.1s ease-in-out;
@@ -402,15 +430,14 @@ h1 {
 
 /* 3페이지 ----------------------------------------------------*/
 .review {
-	background-color: dimgrey ;
+	background-color: white ;
 }
 
 .section_container_3 {
 	position: relative;
-	width: 113vh;
+	width: 130vh;
 	left: 10vw;
 	height: 75vh;
-	max-width: 100%;
 	margin: 10vh auto;
 	padding: 21vh 0;
 	margin-top: 15vh;
@@ -426,16 +453,17 @@ h1 {
 	height: 84vh;
 	bottom: 8vh;
 	margin-right: auto;
-	background-color : rgb(248, 248, 248);
+	background-color : #ffc4b5;
 	border-radius:  0 0 7vh;
 
 }
 
 .section_link_3 {
-	position: relative;
-	left: 50.5vh;
-	width: 30vh;
-	top: 25vh;
+	position: absolute;
+	right: 32vh;
+	width: 11vw;
+	height: 13vh;
+	top: 65vh;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
@@ -445,9 +473,9 @@ h1 {
 	font-weight: 500;
 	letter-spacing: 1px;
 	line-height: 1;
-	border: 3px solid #fff;
-	background-color: rgba(0, 0, 0, 0.07);
-	border-radius: 35px;
+	border: 3px solid #4a7755;
+	background-color: #4a7755;
+	border-radius: 8px;
 	display: inline-block;
 	-webkit-transition: border 0.1s ease-in-out;
 	-o-transition: border 0.1s ease-in-out;
@@ -467,22 +495,24 @@ h1 {
 /* 내부 후기카드 */
 .revSlide{
 	position: absolute;
-	width: 54vw;
-	height: 40vh;
-	left: 20vw;
+	width: 52vw;
+	height: 48vh;
+	left: 22.5vw;
 	bottom: 24vh;
 	display: flex;
 	overflow: hidden;
+	
 }
 
 
 .slide_icon{
 	background-color: rgb(66, 162, 201);
 	margin-top:1vh;
-	width: 8vw;
+	width: 6vw;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	
 
 }
 .slide_text{
@@ -490,7 +520,7 @@ h1 {
 	margin-top:1vh;
 	margin-left: auto;
 	margin-right: auto;
-	width: 17vw;
+	width: 16vw;
 	height: 17vh;
 	padding: 1vh;
 }
@@ -502,31 +532,40 @@ h1 {
 
 
 .thirdPage_thuimnail{
-	width: 55vh;
+	width: 40vh;
 	height: 18vh;
 	text-align: left;
 }
 .thirdPage_thuimnail .font2{
 	font-size: 2vh;
+	margin-left: 2vw;
+
 
 }
+.thirdPage_thuimnail .font1-2{
+	font-size: 46px;
+	margin-left: 2vw;
+	color: black;
+	font-weight: 900;
+}
+
 
 
 
 
 /* 4페이지 ----------------------------------------------------*/
 .hotmenu	{
-	background-color: rgb(212, 212, 108) ;
+	background-color: white;
 
 }
 .outSide_Image_4{
 	position: relative;
 	left: 22vw;
 	width: 70vw;
-	height: 80vh;
-	bottom: 54vh;
+	height: 82vh;
+	bottom: 56vh;
 	margin-right: auto;
-	background-color : rgb(248, 248, 248);
+	background-color :#ffc4b5 ;
 	border-radius:  0 0 0 7vh;
 
 }
@@ -555,10 +594,11 @@ h1 {
 
 
 .section_link_4 {
-	position: relative;
-	left: 23.5vh;
-	width: 30vh;
-	top: 76vh;
+	position: absolute;
+	left: 32.5vh;
+	width: 11vw;
+	height: 13vh;
+	top: 80vh;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
@@ -568,17 +608,19 @@ h1 {
 	font-weight: 500;
 	letter-spacing: 1px;
 	line-height: 1;
-	border: 3px solid #fff;
-	background-color: rgba(0, 0, 0, 0.07);
-	border-radius: 35px;
+	border: 3px solid #4a7755;
+	background-color: #4a7755;
+	border-radius: 8px;
 	display: inline-block;
 	-webkit-transition: border 0.1s ease-in-out;
 	-o-transition: border 0.1s ease-in-out;
 	transition: border 0.1s ease-in-out;
 }
+
 .section_link_4:hover {
 	border-color: #fff;
 }
+
 .section_link_4 .size2{
 	font-size: 2vh;
 	line-height: 2.8vh;
@@ -586,26 +628,35 @@ h1 {
 
 }
 
-
-
 .fourthPage_thuimnail{
 	width: 55vh;
 	height: 18vh;
 	text-align: left;
 }
 .fourthPage_thuimnail .font2{
-	font-size: 2vh;
-
+	font-size: 1.6vh;
+	width: 16vw;
+	margin-left: 3vw;
 }
 .HT_btn{
+	text-decoration: none;
+	text-transform: uppercase;
 	position: relative;
-	width: 5vw;
-	height: 5vh;
+	font-size: 15px;
+	font-weight: 900;
+	width: 6vw;
+	height: 4vh;
 	text-align: center;
 	left: 5vw;
-	top: 2vh;
-	border: 1px solid black;
-	border-radius: 10px;
+	top: 5vh;
+	border: 3px solid black;
+	border-radius: 25px;
+	background-color: white;
+	color: black;
+	opacity: 0.7;
+	-webkit-transition: border 0.2s ease-in-out;
+	-o-transition: border 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out;
 }
 
 
@@ -614,13 +665,11 @@ h1 {
 	display: flex;
 	overflow: hidden;
 	z-index: 1;
-    width: 60vw;
+    width: 59vw;
     height: 40vh;
 	left: 26vw;
-	top:10vh;
+	top: 17vh;
     padding: 1vh 1vh;
-	background-color: rgb(198, 240, 241);
-	/* justify-content: space-between; */
 }
 
 
@@ -629,19 +678,19 @@ h1 {
 
 /* 5페이지 ----------------------------------------------------*/
 .downintro {
-	background-color: rgb(161, 92, 109) ;
+	background-color: white ;
 
 }
 .outSide_Image_5{
 	position: relative;
 	width: 70vw;
-	height: 38vh;
-	bottom: 17vh;
+	height: 45vh;
+	bottom: 12vh;
 	left: 0;
 	right: 0;
 	margin-left: auto;
 	margin-right: auto;
-	background-color : white;
+	background-color : #ffc4b5 ;
 	border-radius: 7vh;
 
 }
@@ -649,9 +698,8 @@ h1 {
 .inSide_Img_5{
 	width: 22vw;
 	height: 34vh;
-	top: 4vh;
+	top: 11vh;
 	right: 6vw;
-
 	position: absolute;
 	background-color: rgb(242, 252, 111);
 	border:1px solid black
@@ -694,7 +742,8 @@ h1 {
 	width: 30vw;
 	left: 40vw;
 	height: 43vh;
-	margin-top: 7vh;
+	top: 48vh;
+	/* margin-top: 13vh; */
 }
 .full_footer .footer_down{
 	margin: 0;
@@ -702,11 +751,12 @@ h1 {
 }
 .full_footer .footer_down .underword{
     width: 30vw;
-    font-size: 1.1vw;
+    font-size: 0.8vw;
 	font-weight: bold;
 	font-stretch: normal;
     font-style: normal; 
-    padding-top: 1vh;
+	padding-top: 1vh;
+	color: gray;
 }
 
 

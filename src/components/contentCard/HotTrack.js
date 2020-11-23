@@ -3,7 +3,6 @@ import './ContentCard.css'
 
 const HotTrack = (props) => {
     return (
-        <div>
              <div className="HT_sectionimgs">
                    
                    <img className="HT_imgSize" src={props.contentInfor.imgUrl}/>
@@ -14,7 +13,6 @@ const HotTrack = (props) => {
                    </div>
 
                </div>
-        </div>
     );
 };
 
