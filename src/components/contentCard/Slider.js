@@ -6,7 +6,7 @@ import './ContentCard.css'
 import '../main/Landing.css'
 
 
-const TOTAL_SLIDES = 3;
+const TOTAL_SLIDES = 2;
 
 export default function Slider() {
 
@@ -97,13 +97,13 @@ export default function Slider() {
                                 />
                         </div>
 
-                        <Button className="clickBtn_L" onClick={slideBtn_L}>
+                        <button className="clickBtn_L" onClick={slideBtn_L}>
                             <img className="btnSize" src={BtnLeft}/>
-                        </Button>
+                        </button>
 
-                        <Button className="clickBtn_R" onClick={slideBtn_R}>
+                        <button className="clickBtn_R" onClick={slideBtn_R}>
                             <img className="btnSize"  src={BtnRight}/>
-                        </Button>
+                        </button>
                         </>
         );
     }

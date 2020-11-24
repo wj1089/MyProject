@@ -5,11 +5,11 @@ const HotTrack = (props) => {
     return (
              <div className="HT_sectionimgs">
                    
-                   <img className="HT_imgSize" src={props.contentInfor.imgUrl}/>
+                   <img className="HT_imgSize" src={props.hottrackInfor.imgUrl}/>
                    
                    <div className="HT_contentText">
-                       <h4>Name : {props.contentInfor.name}</h4>
-                       <p>Text : {props.contentInfor.text}</p>
+                       <h4>Name : {props.hottrackInfor.name}</h4>
+                       <p>Text : {props.hottrackInfor.text}</p>
                    </div>
 
                </div>

@@ -1,14 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-
-import '../main/Landing.css'
+import MenuBar from '../navigation/MenuBar.js';
+import ContentCard from '../contentCard/ContentCard.js'
 import './WidePage.css'
-import MenuBar from '../navigation/MenuBar';
-import ContentCard from '../contentCard/ContentCard'
 
 const WidePage = () => {
-
-
     
     const history = useHistory();
 
@@ -68,9 +64,7 @@ const WidePage = () => {
 
                         {/* 두번째 */}
                         <section className="WP_section2">
-                            <p className="underline">간식<br/>
-                           
-                            </p>
+                            <p className="underline">간식</p>
                             <div className="WP_sectionarea">
                                     
                                 

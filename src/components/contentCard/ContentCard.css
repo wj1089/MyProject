@@ -21,14 +21,11 @@
 }
 
 
-
-
-
-/* HotTrack */
+/* HotTrack ------------------------*/
 .HT_imgSize{
     width: 10vw;
-    height: 16vh;
-    background-color: darkgrey;
+    height: 20vh;
+    /* background-color: darkgrey; */
     border-radius: 15px;
 }
 
@@ -36,27 +33,75 @@
     display: inline-block;
     padding: 0;
     /* background-color: cornsilk; */
-    margin-left: 0.7vw;
+    margin-left: 0.8vw;
     height: 38vh;
     width: 10vw;
 
 } 
 .HT_contentText{
     width: 10vw;
-    height: 20vh;
+    height: 15vh;
     padding: 1vh;
-    background-color: white;
+    /* background-color: white; */
+    
+}
+/* 좌측 버튼 */
+.HTclickBtn_L{
+    position: relative;
+    z-index: 1;
+    width: 3.5vw;
+    height: 7vh;
+    border: 0;
+    bottom: 11vh;
+    left: 23vw;
+    border-radius: 40px;
+    margin-right: auto;
+    margin-left: auto;
+	background-color:  rgba( 255, 255, 255, 0);
+
+}
+
+.HTclickBtn_L:hover{
+    transition:  0.3s ease-in-out;
+    background-color: rgb(138, 140, 145);
+    border-radius: 3vw;
+    background-size: 1vh;
+}
+
+/* 우측버튼 */
+.HTclickBtn_R{
+    position: relative;
+    z-index: 1;
+    width: 3.5vw;
+    height: 7vh;    
+    left: 84.5vw;
+    bottom: 11vh;
+    border: 0;
+    border-radius: 40px;
+	background-color:  rgba( 255, 255, 255, 0);
+;
+
+
+}
+
+.HTclickBtn_R:hover{
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(138, 140, 145);
+
+    border-radius: 3vw;
+    background-size: 1vh;
+
 }
 
 
 
-/* Review image */
+/* Review image --------------------------*/
 .inSide_slide{
 	position: relative;
 	width: 20vw;
 	height: 40vh;
 	border-radius: 16px;
-    margin: 0 0 0 15px;
+    margin: 0 0 0 0.71vw;
     margin-top: 6vh;
 	background-color: white;
     border:1px solid black;
@@ -90,7 +135,6 @@
 
 /* 전체 슬라이더 영역 */
 .SliderContainer {
-    /* margin-left : 4vw; */
     width: 51vw;
     display: flex; 
 
@@ -126,16 +170,16 @@
     width: 3.5vw;
     height: 7vh;
     border: 0;
-    bottom: 10vh;
-    left: 18vw;
+    bottom: 11vh;
+    left: 19vw;
     border-radius: 40px;
+	background-color:  rgba( 255, 255, 255, 0);
 
 }
 
 .clickBtn_L:hover{
     transition:  0.3s ease-in-out;
     background-color: rgb(138, 140, 145);
-    color: #fff;
     border-radius: 3vw;
     background-size: 1vh;
 }
@@ -143,9 +187,12 @@
 /* 우측버튼 */
 .clickBtn_R{
     position: relative;
+    z-index: 1;
+	background-color:  rgba( 255, 255, 255, 0);
+
     width: 3.5vw;
     height: 7vh;    
-    left: 71.5vw;
+    left: 72vw;
     bottom: 11vh;
     border: 0;
     border-radius: 40px;
@@ -153,22 +200,18 @@
 }
 
 .clickBtn_R:hover{
-    transition: all 0.3s ease-in-out;
+    transition:  0.3s ease-in-out;
     background-color: rgb(138, 140, 145);
-    color: #fff;
     border-radius: 3vw;
     background-size: 1vh;
-
 }
-/* .clickBtn_R:after{
-    transform: translateX(-120%);
 
-} */
 
 .btnSize{
     width: 4vw;
     height: 7vh;
     border-radius: 40px;
+    background-color:fixed;
 }
   
  

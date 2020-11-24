@@ -14,7 +14,9 @@ function ReviewCard (props)  {
                 <div className="slide_icon">
                     <p>이모티콘</p>
                 </div>
+                {/* <div className="slide">
 
+                </div> */}
                 <div className="slide_text">
                     <p>Review : {props.reviewInfor.review}</p>
                 </div>

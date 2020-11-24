@@ -21,96 +21,10 @@ header {
 	z-index: 1;
 	padding: 0 15px;
 	color: #030303;
-	background-color: #ffff;
+	/* background-color: rgba( 255, 255, 255, 0.5 ); */
 	display: inline-block;
-
-}
-
-/* 상단메뉴바 */
-.nav_menubar{
-	height: 10vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-    list-style: none; 
-	padding-left: 0;
-	background-color: white;
 	/* opacity: 0.1; */
 
-}
-
-.nav_menubar li :hover{
-	background-color: #d49466;
-	border-radius: 10px;
-
-}
-.nav_menu{
-	width: 20vw;
-	display: flex;
-	list-style: none;
-	padding-right: 5%;
-	padding: 8px 15px;
-
-}
-
-.nav_menu li{
-	width: 7vw;
-	height: 45px;
-	margin:4px 14px 5px 5%;
-	font-family: NotoSansKR;
-	font-size: 25px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: 1.45;
-	letter-spacing: normal;
-	text-align: center;
-
-  
-}
-
-
-.one{
-	width: 10vh;
-	font-size: 1vw;
-	font-weight: 900;
-	color: black;
-	
-}
-.two{
-	width: 10vh;
-	font-size: 1vw;
-	font-weight: bolder;
-	color: black;
-
-}
-
-
-a{
-	text-decoration: none;
-	color: black
-	
-}
-
-
-
-
-.logo{
-	width: 185px;
-	text-align: left;
-	font-size: 20px;
-	font-weight: 300;
-	font-size: 40px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	color: white;
-	padding-left: 20px;
-}
-
-
-.logo .img{
-	width: 50%;
-	height: 50%;
 }
 
 section {
@@ -249,6 +163,7 @@ h1 {
 /* 메인페이지 ----------------------------------------------------*/
 .main {
 	background-color: rgb(255, 255, 255);
+	
 }
 .outSide_Image{
 	position: absolute;
@@ -260,7 +175,8 @@ h1 {
 	margin-right: auto;
 	background-color : #ffc4b5;
 	border-radius: 7vh;
-
+	background-image: url("../../resource/pcbg_pattern.png");
+	background-size: 100vw;
 }
 
 .inSide_Img{
@@ -282,6 +198,7 @@ h1 {
 	margin: 0vh auto;
 	padding: 6vh 0vh;
 	color: #fff;
+	
 }
 .right .section_container {
 	text-align: right;
@@ -290,8 +207,20 @@ h1 {
 .section_container.main {
 	padding-top: 250px;
 	text-align: center;
+	
+}
+.thumImage{
+	width: 26vw;
+	height: 10vh;
+
 }
 
+.ayi_img{
+	background-size: 80vw;
+	width: 15vw;
+	margin-top: 4vh;
+
+}
 
 .fistPage_thuimnail{
 	width: 55vw;
@@ -374,6 +303,7 @@ h1 {
 	width: 55vh;
 	height: 18vh;
 	text-align: left;
+	
 }
 
 .secondPage_thuimnail .font2{
@@ -384,7 +314,7 @@ h1 {
 
 }
 .secondPage_thuimnail .font1-2{
-	font-size: 46px;
+	font-size: 42px;
 	margin-top: 1.5vh;
 	color: black;
 	font-weight: 900;
@@ -408,7 +338,8 @@ h1 {
 	border: 3px solid #4a7755;
 	background-color: #4a7755;
 	border-radius: 8px;
-	display: inline-block;
+	/* box-shadow: black; */
+	/* display: inline-block; */
 	-webkit-transition: border 0.1s ease-in-out;
 	-o-transition: border 0.1s ease-in-out;
 	transition: border 0.1s ease-in-out;
@@ -431,6 +362,7 @@ h1 {
 /* 3페이지 ----------------------------------------------------*/
 .review {
 	background-color: white ;
+
 }
 
 .section_container_3 {
@@ -497,7 +429,7 @@ h1 {
 	position: absolute;
 	width: 52vw;
 	height: 48vh;
-	left: 22.5vw;
+	left: 23vw;
 	bottom: 24vh;
 	display: flex;
 	overflow: hidden;
@@ -562,8 +494,8 @@ h1 {
 	position: relative;
 	left: 22vw;
 	width: 70vw;
-	height: 82vh;
-	bottom: 56vh;
+	height: 84vh;
+	bottom: 63.2vh;
 	margin-right: auto;
 	background-color :#ffc4b5 ;
 	border-radius:  0 0 0 7vh;
@@ -665,9 +597,9 @@ h1 {
 	display: flex;
 	overflow: hidden;
 	z-index: 1;
-    width: 59vw;
+    width: 61vw;
     height: 40vh;
-	left: 26vw;
+	left: 27vw;
 	top: 17vh;
     padding: 1vh 1vh;
 }
@@ -720,7 +652,19 @@ h1 {
 .right .section_container {
 	text-align: right;
 }
+.fab {
+	font-weight:400;
+	font-size: 2vw;
+	color: #a19999;
+	position: relative;
+	right: 78vw;
+	top: 15vh;
+}
 
+.fab fa-instagram{
+	width: 5vw;
+	height: 5vh;
+}
 
 
 .section_container .review {
