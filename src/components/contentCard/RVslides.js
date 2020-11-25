@@ -4,7 +4,7 @@ import '../main/Landing.css'
 import ReviewCard from './ReviewCard'
 import BtnRight from "../../resource/right.png";
 import BtnLeft from "../../resource/left.png";
-
+import axios from 'axios';
 
 
 
@@ -55,49 +55,6 @@ const RVslides = () => {
                             review:"슬라이드 설명란"}}
                     />
 
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk947s--HqgeZk3Mtm4DSzvl5qGISexz0wKQ&usqp=CAU",
-                            review:"슬라이드 설명란"}}
-                        />
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwIfVA1gedjl4srs_cRj60gbybmruU3QiZw&usqp=CAU",
-                            review:"슬라이드 설명란"}}
-                        />
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://lh3.googleusercontent.com/proxy/owdwckDRadaf9RTTvxSzhoPLC2xy61B_Iw3X1o13ezxJIeEI27-ZYio0dIMkMcz9nTXDHqInHzhThm1jnxGlePTa5Kr57ZhqSkyV-3LA8Ks1C5MJg8UfwpyzLzmfzu_6hZ0LArI8NQdA4gyUWZuuzKt4BpBBoKad0EV0Eeyiox6oCSoPE88zY7mV6XeDYTiloPAKYs7hrLjp4fCUPOPSavLBZYooGOj_hytHC3yI0iJ6779pP0XPoJI4zgWq4VFFVohEApZVT7BZh2BjBPe0UDHfJjoVyfJ9A5jGMw89VA",
-                            review:"슬라이드 설명란"}}
-                    />
-
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk947s--HqgeZk3Mtm4DSzvl5qGISexz0wKQ&usqp=CAU",
-                            review:"슬라이드 설명란"}}
-                        />
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwIfVA1gedjl4srs_cRj60gbybmruU3QiZw&usqp=CAU",
-                            review:"슬라이드 설명란"}}
-                        />
-
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://lh3.googleusercontent.com/proxy/owdwckDRadaf9RTTvxSzhoPLC2xy61B_Iw3X1o13ezxJIeEI27-ZYio0dIMkMcz9nTXDHqInHzhThm1jnxGlePTa5Kr57ZhqSkyV-3LA8Ks1C5MJg8UfwpyzLzmfzu_6hZ0LArI8NQdA4gyUWZuuzKt4BpBBoKad0EV0Eeyiox6oCSoPE88zY7mV6XeDYTiloPAKYs7hrLjp4fCUPOPSavLBZYooGOj_hytHC3yI0iJ6779pP0XPoJI4zgWq4VFFVohEApZVT7BZh2BjBPe0UDHfJjoVyfJ9A5jGMw89VA",
-                            review:"슬라이드 설명란"}}
-                    />
-
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk947s--HqgeZk3Mtm4DSzvl5qGISexz0wKQ&usqp=CAU",
-                            review:"슬라이드 설명란"}}
-                        />
-                    <ReviewCard
-                        reviewInfor={{
-                            imgUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUwIfVA1gedjl4srs_cRj60gbybmruU3QiZw&usqp=CAU",
-                            review:"슬라이드 설명란"}}
-                        />
                 </div>
             </div>
                 <div>

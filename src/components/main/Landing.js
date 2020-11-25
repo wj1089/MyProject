@@ -1,13 +1,25 @@
 import React, {useState,useEffect,useRef} from 'react';
-import {useHistory,Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 import MenuBar from '../navigation/MenuBar';
-import HTslides from '../contentCard/HTslides';
-import RVslides from '../contentCard/RVslides';
+// import HTslides from '../contentCard/HTslides';
 import Footer from '../footer/Footer';
-import './Landing.css'
-import AyiImage from '../../resource/logo_wm.png'
-// import '../contentCard/ContentCard.css';
 
+import AyiImage from '../../resource/logo_wm.png'
+import BtnRight from "../../resource/right.png";
+import BtnLeft from "../../resource/left.png";
+
+import axios from 'axios';
+import './Landing.css'
+import '../contentCard/ContentCard.css';
+
+// import RVslides from '../contentCard/RVslides';
+// import ReviewCard from '../contentCard/ReviewCard'
+
+
+
+
+
+const TOTAL_SLIDES = 2;
 const Landing = () => {
 
     const history = useHistory();
@@ -16,6 +28,10 @@ const Landing = () => {
     const sectionTitle = [ 'Main', 'Delivery', 'Review','Hotmenu','Downintro' ];
     const mainContent = useRef();
     
+
+
+
+
 //main 스크롤
     useEffect(() => {        
         scrollContent(spinIndex);
@@ -56,6 +72,55 @@ const Landing = () => {
     };
 
 
+
+//Review section && Slide
+        const [currentSlide, setCurrentSlide] = useState(0);
+        const slideRef = useRef(null);
+
+        // 다음슬라이드
+            const slideBtn_R = () => {
+                if (currentSlide >= TOTAL_SLIDES) { // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
+                setCurrentSlide(0);
+                } else {
+                setCurrentSlide(currentSlide + 1);
+                }
+            };
+
+        // 전슬라이드
+            const slideBtn_L = () => {
+                if (currentSlide === 0) {
+                setCurrentSlide(TOTAL_SLIDES);
+                } else {
+                setCurrentSlide(currentSlide - 1);
+                }
+            };
+
+        useEffect(() => {
+            slideRef.current.style.transition = "all 1.5s ease-in-out";
+            slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+        }, [currentSlide]);
+
+
+//
+        const [msg, setMsg] = useState([]);
+
+            useEffect(()=>{
+                axios
+                .get(`https://igre-prod.appspot.com/_ah/api/category/v1/getList?id=6476096291733504`)
+                .then(response=>{
+                    if(response && response.data.code === "1"){
+                        const parseJson = JSON.parse(response.data.msg);
+                        // console.log(parseJson)
+                        setMsg(parseJson[1].products)
+                        console.log(parseJson)
+                    }
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+            },[])
+    
+    
 
     return (
         <main className="full_screen">
@@ -144,9 +209,41 @@ const Landing = () => {
                                             확인해보세요. 
                                         </p>
                             </div>
+                       
 
-                        {/* 상품리뷰 슬라이드 */}
-                        <RVslides/>
+
+
+                            {/* 상품리뷰 슬라이드 */}
+                            
+                        <div className="revSlide">
+                            {currentSlide}
+                            <div className="SliderContainer" ref={slideRef}>
+                            {
+                                msg.map( msg => (
+                                    <div className="inSide_slide">
+                                        <div className="slide_img" key={msg.categoryId}>
+                                        <p src={msg.thumnail} className="imgSize"></p>
+                                        <p className="slide_icon"></p>
+                                        <p className="slide_text">
+                                            <p className="RV_contentName">{msg.name}</p><br/>
+                                            <p className="RV_contentDes">{msg.description}</p> 
+                                        </p>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+
+                <div>
+                        <button className="clickBtn_L" onClick={slideBtn_L}>
+                            <img className="btnSize" src={BtnLeft}/>
+                        </button>
+
+                        <button className="clickBtn_R" onClick={slideBtn_R}>
+                            <img className="btnSize"  src={BtnRight}/>
+                        </button>
+                </div>
                             
                             {/* 다운버튼 */}
                             <button className="section_link_3" onClick={()=>{history.push('/WidePage')}}>
@@ -179,14 +276,45 @@ const Landing = () => {
                         </div>
 
                     {/* 인기상품 슬라이드 */}
-                        <HTslides/>
-                        
-                                
+                    {currentSlide}
+
+                    <div className="HT_sectionarea">
+                        <div className="SliderContainer" ref={slideRef}>
+                        {/* 각 컨텐츠 */}
+                        {
+                            msg.map(msg=>(
+                                <div className="HT_sectionimgs">
+                                    <div className="HT_imgSize" key={msg.categoryId}>
+                                        <p src={msg.thumnail} className="imgSize"></p>
+                                        <p className="HT_contentText">
+                                            <p className="HT_contentName">{msg.name}</p><br/>
+                                            <p className="HT_contentDes">{msg.description}</p> 
+                                        </p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                {/* 슬라이드 버튼 */}
+
+                <div>
+                    <button className="HTclickBtn_L" onClick={slideBtn_L}>
+                        <img className="btnSize" src={BtnLeft}/>
+                    </button>
+
+                    <button className="HTclickBtn_R" onClick={slideBtn_R}>
+                        <img className="btnSize"  src={BtnRight}/>
+                    </button>
+                </div>
+
+
+                {/* 2번섹션기능 중복사용 */}
                         <div className="outSide_Image_4">      
 
                             <button className="section_link_4" onClick={()=>{history.push('/WidePage')}}>
                                 <span>
-                                    {/* 2번섹션기능 중복사용 */}
                                     <a className="size2">
                                         아이그레<br/>
                                         앱 다운로드

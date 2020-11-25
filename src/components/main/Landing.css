@@ -452,9 +452,10 @@ h1 {
 	margin-top:1vh;
 	margin-left: auto;
 	margin-right: auto;
-	width: 16vw;
+	width: 10vw;
 	height: 17vh;
 	padding: 1vh;
+	font-size: 12px;
 }
 
 .section_container .review {
@@ -598,9 +599,9 @@ h1 {
 	overflow: hidden;
 	z-index: 1;
     width: 61vw;
-    height: 40vh;
+    height: 44vh;
 	left: 27vw;
-	top: 17vh;
+	top: 11vh;
     padding: 1vh 1vh;
 }
 
