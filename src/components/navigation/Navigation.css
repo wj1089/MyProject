@@ -9,12 +9,13 @@
 	padding-left: 0;
 	background-color: #ffffff;
 	background-color:  rgba( 255, 255, 255, 0);
-    
+
 }
 
 .nav_menubar li :hover{
-	background-color: #d49466;
+	background-color: #c9c4c0;
 	border-radius: 10px;
+	transition: ease-out 0.3s;
 
 }
 .nav_menu{

@@ -1,21 +1,13 @@
 import React, {useState,useEffect,useRef} from 'react';
 import {useHistory} from 'react-router-dom'
 import MenuBar from '../navigation/MenuBar';
-// import HTslides from '../contentCard/HTslides';
 import Footer from '../footer/Footer';
-
-import AyiImage from '../../resource/logo_wm.png'
-import BtnRight from "../../resource/right.png";
-import BtnLeft from "../../resource/left.png";
-
 import axios from 'axios';
 import './Landing.css'
 import '../contentCard/ContentCard.css';
-
-// import RVslides from '../contentCard/RVslides';
-// import ReviewCard from '../contentCard/ReviewCard'
-
-
+import AyiImage from '../../resource/logo_wm.png'
+import BtnRight from "../../resource/arrow_forward_ios.svg";
+import BtnLeft from "../../resource/arrow_back_ios.svg";
 
 
 
@@ -76,8 +68,10 @@ const Landing = () => {
 //Review section && Slide
         const [currentSlide, setCurrentSlide] = useState(0);
         const slideRef = useRef(null);
+        const [currentSlide2, setCurrentSlide2] = useState(0);
+        const slideRef2 = useRef(null);
 
-        // 다음슬라이드
+        // Review 다음 슬라이드
             const slideBtn_R = () => {
                 if (currentSlide >= TOTAL_SLIDES) { // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
                 setCurrentSlide(0);
@@ -86,7 +80,7 @@ const Landing = () => {
                 }
             };
 
-        // 전슬라이드
+        // Review 전 슬라이드
             const slideBtn_L = () => {
                 if (currentSlide === 0) {
                 setCurrentSlide(TOTAL_SLIDES);
@@ -95,13 +89,33 @@ const Landing = () => {
                 }
             };
 
+        // HotTrack 다음 슬라이드
+        const HTslideBtn_R = () => {
+            if (currentSlide2 >= TOTAL_SLIDES) { // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
+            setCurrentSlide2(0);
+            } else {
+            setCurrentSlide2(currentSlide2 + 1);
+            }
+        };
+
+        // HotTrack 전 슬라이드
+            const HTslideBtn_L = () => {
+                if (currentSlide2 === 0) {
+                setCurrentSlide2(TOTAL_SLIDES);
+                } else {
+                setCurrentSlide2(currentSlide2 - 1);
+                }
+            };
+
         useEffect(() => {
             slideRef.current.style.transition = "all 1.5s ease-in-out";
+            slideRef2.current.style.transition = "all 1.5s ease-in-out";
             slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
-        }, [currentSlide]);
+            slideRef2.current.style.transform = `translateX(-${currentSlide2}00%)`; 
+        }, [currentSlide,currentSlide2]);
 
 
-//
+//HotTrack axios, API연결
         const [msg, setMsg] = useState([]);
 
             useEffect(()=>{
@@ -111,7 +125,7 @@ const Landing = () => {
                     if(response && response.data.code === "1"){
                         const parseJson = JSON.parse(response.data.msg);
                         // console.log(parseJson)
-                        setMsg(parseJson[1].products)
+                        setMsg(parseJson[0].products)
                         console.log(parseJson)
                     }
                 })
@@ -120,7 +134,28 @@ const Landing = () => {
                 })
             },[])
     
-    
+//Review axios, API 연결
+        const [msga, setMsga] = useState([]);
+        const [item, setItem] = useState([]);
+        useEffect(()=>{
+            axios
+            .get(`https://childsnack-test.appspot.com/_ah/api/review/v1/getReviewList?count=1&startCursor=0`)
+            .then(res=>{
+                if(res && res.data.code === "1"){
+                    const parseJson = JSON.parse(res.data.item)
+                    const aaaa = parseJson.item
+                    // setMsg(prsJson[1])
+                    setItem(aaaa);
+                }
+            })
+            .catch(error=>{
+                console.log(error)
+            })
+
+        })
+
+
+
 
     return (
         <main className="full_screen">
@@ -138,8 +173,8 @@ const Landing = () => {
                     <div className="outSide_Image">      
 
                         <div className="section_container">
-                            <div className="fistPage_thuimnail">
-                                <p className="thumImage"><img className="ayi_img" src={AyiImage}/></p>
+                            <div className="firstPage_thumnail">
+                                <p className="font1"><img className="ayi_img" src={AyiImage}/></p>
                                 <p className="font2">
                                             어린이 식품 <br/>
                                             정기배송 서비스
@@ -166,7 +201,7 @@ const Landing = () => {
                     <div className="outSide_Image">    
 
                         <div className="section_container_2">
-                            <div className="secondPage_thuimnail">
+                            <div className="secondPage_thumnail">
                                 <p className="font1"> 다양한 상품을</p>
                                 <p className="font1-2">편리한 정기배송으로</p>
                                 <p className="font2">
@@ -200,8 +235,10 @@ const Landing = () => {
                     <div className="outSide_Image_3">      
 
                         <div className="section_container_3">
-                            <div className="thirdPage_thuimnail">
-                                        <p className="font1"> #아이그레</p>
+                            <div className="thirdPage_thumnail">
+                                        <p className="font1"> 
+                                <i className="fas fa-hashtag"></i>
+                                            <img className="ayi_img" src={AyiImage}/></p>
                                         <p className="font1-2">고객후기</p>
                                         <p className="font2">
                                             정기배송을 경험한 <br/>
@@ -209,25 +246,22 @@ const Landing = () => {
                                             확인해보세요. 
                                         </p>
                             </div>
-                       
-
-
 
                             {/* 상품리뷰 슬라이드 */}
                             
                         <div className="revSlide">
-                            {currentSlide}
                             <div className="SliderContainer" ref={slideRef}>
                             {
-                                msg.map( msg => (
+                                item.map( item => (
                                     <div className="inSide_slide">
-                                        <div className="slide_img" key={msg.categoryId}>
-                                        <p src={msg.thumnail} className="imgSize"></p>
-                                        <p className="slide_icon"></p>
-                                        <p className="slide_text">
-                                            <p className="RV_contentName">{msg.name}</p><br/>
-                                            <p className="RV_contentDes">{msg.description}</p> 
-                                        </p>
+                                        <div className="slide_img" key={item.id}>
+                                        {/* className="imgSize" */}
+                                            <p src={item.product.thumnail}></p>
+                                            <p className="slide_icon"></p>
+                                            <p className="slide_text">
+                                                <p className="RV_contentName">{item.point}</p><br/>
+                                                <p className="RV_contentDes">{item.description}</p> 
+                                            </p>
                                         </div>
                                     </div>
                                 ))
@@ -265,8 +299,12 @@ const Landing = () => {
                 <section className="fbp hotmenu" data-title="Hotmenu">
                 
                     <div className="section_container_4">
-                        <div className="fourthPage_thuimnail">
-                            <p className="font1">#인기상품<br/></p>
+                        <div className="fourthPage_thumnail">
+                            <p className="font1">
+                                <i className="fas fa-hashtag"></i>
+                                <img className="ayi_img2" src={AyiImage}/>
+                            </p>
+                            <p className="font3">인기상품<br/></p>
                             <p className="font2">
                             아이그레가 자신있게<br/>
                             추천드리는 상품입니다.
@@ -276,16 +314,16 @@ const Landing = () => {
                         </div>
 
                     {/* 인기상품 슬라이드 */}
-                    {currentSlide}
+                    {/* {currentSlide} */}
 
                     <div className="HT_sectionarea">
-                        <div className="SliderContainer" ref={slideRef}>
-                        {/* 각 컨텐츠 */}
+                        <div className="SliderContainer" ref={slideRef2}>
+
                         {
                             msg.map(msg=>(
                                 <div className="HT_sectionimgs">
                                     <div className="HT_imgSize" key={msg.categoryId}>
-                                        <p src={msg.thumnail} className="imgSize"></p>
+                                        <img src={msg.thumnail} className="imgSize"></img>
                                         <p className="HT_contentText">
                                             <p className="HT_contentName">{msg.name}</p><br/>
                                             <p className="HT_contentDes">{msg.description}</p> 
@@ -300,11 +338,11 @@ const Landing = () => {
                 {/* 슬라이드 버튼 */}
 
                 <div>
-                    <button className="HTclickBtn_L" onClick={slideBtn_L}>
+                    <button className="HTclickBtn_L" onClick={HTslideBtn_L}>
                         <img className="btnSize" src={BtnLeft}/>
                     </button>
 
-                    <button className="HTclickBtn_R" onClick={slideBtn_R}>
+                    <button className="HTclickBtn_R" onClick={HTslideBtn_R}>
                         <img className="btnSize"  src={BtnRight}/>
                     </button>
                 </div>
@@ -332,9 +370,9 @@ const Landing = () => {
                     <div className="outSide_Image_5">      
 
                         <div className="section_container_5">
-                            <div className="fifthPage_thuimnail">
+                            <div className="fifthPage_thumnail">
                                     <p className="font1">
-                                        LOGO
+                                    <img className="ayi_img2" src={AyiImage}/>
                                     
                                     </p>
                                     <p className="font2">
@@ -346,7 +384,7 @@ const Landing = () => {
                             
                             
                             {/* 1번섹션기능 중복사용 */}
-                            <button className="section_link_1" onClick={()=>{history.push('/WidePage')}}> 
+                            <button className="section_link_5" onClick={()=>{history.push('/WidePage')}}> 
                             앱 다운로드
                             </button>
 

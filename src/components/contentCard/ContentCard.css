@@ -25,14 +25,12 @@
 .HT_imgSize{
     width: 10vw;
     height: 20vh;
-    background-color: aquamarine;
     border-radius: 15px;
 }
 
 .HT_sectionimgs{
     display: inline-block;
     padding: 0;
-    /* background-color: aquamarine; */
     margin-left: 0.8vw;
     height: 38vh;
     width: 10vw;
@@ -42,65 +40,66 @@
     width: 10vw;
     height: 22vh;
     padding: 1vh;
-    margin-top: 6vh;
-    background-color: white;
-    
+
 }
 .HT_contentName{
     font-weight: 900;
-
+    text-align: center;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
 }
 .HT_contentDes{
-    font-size: 13px;
-    font-weight: 300;
+    margin : 0 4px 0 4px;
+    font-size: 0.7vw;
+    font-style: normal;
+    font-weight: normal;
+    font-family: NotoSansKR;
+    letter-spacing: normal;
+    text-align: left;
 }
 
 /* 좌측 버튼 */
 .HTclickBtn_L{
-    position: relative;
+    position: absolute;
     z-index: 1;
-    width: 3.5vw;
-    height: 7vh;
-    border: 0;
-    bottom: 11vh;
+    width: 5.3vw;
+    height: 43vh;
+    border: none;
+    top: 12vh;
     left: 23vw;
-    border-radius: 40px;
     margin-right: auto;
     margin-left: auto;
-	background-color:  rgba( 255, 255, 255, 0);
+    background-color: rgba(150, 150, 150, 0);
 
 }
 
 .HTclickBtn_L:hover{
     transition:  0.3s ease-in-out;
-    background-color: rgb(138, 140, 145);
-    border-radius: 3vw;
-    background-size: 1vh;
+    background-color:#ffffff;
+    opacity: 0.5;
+    background-size: 5vh;
 }
 
 /* 우측버튼 */
 .HTclickBtn_R{
-    position: relative;
+    position: absolute;
     z-index: 1;
-    width: 3.5vw;
-    height: 7vh;    
+    width: 5.3vw;
+    top: 12vh;
+    height: 43vh; 
     left: 84.5vw;
     bottom: 11vh;
     border: 0;
-    border-radius: 40px;
-	background-color:  rgba( 255, 255, 255, 0);
-;
-
+    background-color: rgba(150, 150, 150, 0);
 
 }
 
 .HTclickBtn_R:hover{
-    transition: all 0.3s ease-in-out;
-    background-color: rgb(138, 140, 145);
-
-    border-radius: 3vw;
-    background-size: 1vh;
-
+    transition:  0.3s ease-in-out;
+    background-color:#ffffff;
+    opacity: 0.5;
+    background-size: 5vh;
 }
 
 
@@ -130,7 +129,7 @@
 
 .imgSize{
 	width: 10vw;
-    height: 15vh;
+    height: 16vh;
     margin-left :auto;
     margin-right :auto;
     text-align:center;
@@ -184,50 +183,49 @@
   
 /* 좌측 버튼 */
 .clickBtn_L{
-    position: relative;
+    position: absolute;
     z-index: 1;
-    width: 3.5vw;
-    height: 7vh;
+    width: 5.3vw;
+    top: 9vh;
+    height: 40vh; 
+    left: 18vw;
+    bottom: 9vh;
     border: 0;
-    bottom: 11vh;
-    left: 19vw;
-    border-radius: 40px;
-	background-color:  rgba( 255, 255, 255, 0);
+    background-color: rgba(150, 150, 150, 0);
 
 }
 
 .clickBtn_L:hover{
     transition:  0.3s ease-in-out;
-    background-color: rgb(138, 140, 145);
-    border-radius: 3vw;
-    background-size: 1vh;
+    background-color:#ffffff;
+    opacity: 0.5;
+    background-size: 5vh;
 }
 
 /* 우측버튼 */
 .clickBtn_R{
-    position: relative;
+    position: absolute;
     z-index: 1;
-	background-color:  rgba( 255, 255, 255, 0);
-
-    width: 3.5vw;
-    height: 7vh;    
-    left: 72vw;
-    bottom: 11vh;
+    width: 5.3vw;
+    top: 9vh;
+    height: 40vh; 
+    left: 80vw;
+    bottom: 9vh;
     border: 0;
-    border-radius: 40px;
+    background-color: rgba(150, 150, 150, 0);
 
 }
 
 .clickBtn_R:hover{
     transition:  0.3s ease-in-out;
-    background-color: rgb(138, 140, 145);
-    border-radius: 3vw;
-    background-size: 1vh;
+    background-color:#ffffff;
+    opacity: 0.5;
+    background-size: 5vh;
 }
 
 
 .btnSize{
-    width: 4vw;
+    width: 2vw;
     height: 7vh;
     border-radius: 40px;
     background-color:fixed;

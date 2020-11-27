@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: NotoSansKR;
 	margin: 0;
 }
 * {
@@ -10,7 +12,6 @@ body {
 	padding: 0;
 	
 }
-
 
 
 header {
@@ -154,15 +155,19 @@ h1 {
 
 
 .font1{
-	font-size: 3vw;
-	font-weight: 700;
-	color: black;
+	font-size: 3.2rem;
+	font-weight: 900;
+	color: #000000;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.16;
 }
 
 
 /* 메인페이지 ----------------------------------------------------*/
 .main {
-	background-color: rgb(255, 255, 255);
+	background-color: #ffffff;
 	
 }
 .outSide_Image{
@@ -217,54 +222,75 @@ h1 {
 
 .ayi_img{
 	background-size: 80vw;
-	width: 15vw;
+	width: 12vw;
+	height: 5vh;
+}
+.ayi_img2{
+	background-size: 80vw;
+	width: 12vw;
 	margin-top: 4vh;
 
 }
 
-.fistPage_thuimnail{
+.firstPage_thumnail{
 	width: 55vw;
-	height: 18vh;
+	height: 16vh;
 	text-align: left;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: 800;
 }
-.fistPage_thuimnail .font2{
-	font-size: 38px;
-	font-weight: 900;
+.firstPage_thumnail .font2{
+	font-size: 2.3rem;
 	margin-top: 1.5vh;
 	color: black;
-
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: bold;
+	line-height: 1.4;
 }
 
 
 .section_link_1 {
-	margin-top: 6vh;
-	color: white;
+	font-size: 1.5rem;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: bold;
 	text-decoration: none;
 	text-transform: uppercase;
+	display: inline-block;
+	margin-top: 8vh;
 	padding: 1.2vh 3vw;
-	font-size: 1.2vw;
-	font-weight: 500;
 	letter-spacing: 0.1vw;
 	line-height: 1;
-	border: 0.1vw solid rgba(0, 0, 0, 0.56);
+	border: solid 3px #34613f;
+	color: #ffffff;
 	background-color: #4a7755;
+	box-shadow: 0 3px 6px 0
+		rgba(0,0,0,0.16);
 	border-radius: 0.5vw;
-	display: inline-block;
-	-webkit-transition: border 0.1s ease-in-out;
-	-o-transition: border 0.1s ease-in-out;
-	transition: border 0.1s ease-in-out;
+	transition: ease-out 0.3s;
+	
 }
-.section_link:hover {
-	border-color: rgb(0, 0, 0);
-}
+.section_link_1:hover {
+	color: #34613f;
+	border-color: #34613f;
+	background-color: #ffffff;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	border: solid 3px #34613f;
+	background-color: #ffffff;
 
+}
 
 
 
 /* 2페이지 ----------------------------------------------------*/
 
 .delivery {
-	background-color: white;
+	background-color: #ffffff;
 }
 
 .outSide_Image2{
@@ -299,26 +325,37 @@ h1 {
 	text-align: center;
 }
 
-.secondPage_thuimnail{
+.secondPage_thumnail{
 	width: 55vh;
 	height: 18vh;
 	text-align: left;
 	
 }
 
-.secondPage_thuimnail .font2{
-	font-size: 2vh;
-	margin-top: 3vh;
-	color: black;
-	
-
-}
-.secondPage_thuimnail .font1-2{
-	font-size: 42px;
+.secondPage_thumnail .font2{
+	font-size: 1.2rem;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.57;
+	color: #222222;
+	left: 15vw;
 	margin-top: 1.5vh;
-	color: black;
-	font-weight: 900;
+	margin-left: 0.2vw;
+	letter-spacing: normal;
 }
+
+.secondPage_thumnail .font1-2{
+	font-size: 42px;
+	margin-top: 1vh;
+	color: #222222;
+	font-weight: 900;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+}
+
 
 .section_link_2 {
 	position: relative;
@@ -361,7 +398,7 @@ h1 {
 
 /* 3페이지 ----------------------------------------------------*/
 .review {
-	background-color: white ;
+	background-color: #ffffff ;
 
 }
 
@@ -391,11 +428,11 @@ h1 {
 }
 
 .section_link_3 {
-	position: absolute;
-	right: 32vh;
+	position: relative;
 	width: 11vw;
 	height: 13vh;
-	top: 65vh;
+	left: 35.8vw;
+	top: 26vh;
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
@@ -441,6 +478,7 @@ h1 {
 	background-color: rgb(66, 162, 201);
 	margin-top:1vh;
 	width: 6vw;
+	height: 2vh;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -464,22 +502,31 @@ h1 {
 }
 
 
-.thirdPage_thuimnail{
-	width: 40vh;
+.thirdPage_thumnail{
+	width: 35vh;
 	height: 18vh;
 	text-align: left;
 }
-.thirdPage_thuimnail .font2{
-	font-size: 2vh;
+.thirdPage_thumnail .font2{
+	font-size: 1.2vw;
 	margin-left: 2vw;
-
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: normal;
+	margin: 1vh 3vw 1vw 2.5vw;
 
 }
-.thirdPage_thuimnail .font1-2{
-	font-size: 46px;
+.thirdPage_thumnail .font1-2{
+	font-size: 2.5vw;
 	margin-left: 2vw;
-	color: black;
+	color: #000000;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
 	font-weight: 900;
+	letter-spacing: normal;
+	margin: 1vh 3vw 1vh 2.5vw;
 }
 
 
@@ -488,7 +535,7 @@ h1 {
 
 /* 4페이지 ----------------------------------------------------*/
 .hotmenu	{
-	background-color: white;
+	background-color:  #ffffff;
 
 }
 .outSide_Image_4{
@@ -496,7 +543,7 @@ h1 {
 	left: 22vw;
 	width: 70vw;
 	height: 84vh;
-	bottom: 63.2vh;
+	bottom: 56vh;
 	margin-right: auto;
 	background-color :#ffc4b5 ;
 	border-radius:  0 0 0 7vh;
@@ -561,35 +608,55 @@ h1 {
 
 }
 
-.fourthPage_thuimnail{
-	width: 55vh;
+.fourthPage_thumnail{
+	width: 35vh;
 	height: 18vh;
+	margin-left: 5vw;
 	text-align: left;
 }
-.fourthPage_thuimnail .font2{
+.fourthPage_thumnail .font2{
 	font-size: 1.6vh;
 	width: 16vw;
-	margin-left: 3vw;
+	margin-left: 2vw;
+	color: #222222;
+}
+.font3{
+	font-size: 2.5vw;
+	margin-left: 1.7vw;
+	margin-bottom: 1vh;
+	font-weight: 900;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.4;
 }
 .HT_btn{
-	text-decoration: none;
-	text-transform: uppercase;
+	/* text-decoration: none; */
+	/* text-transform: uppercase; */
 	position: relative;
-	font-size: 15px;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-size: 1vw;
 	font-weight: 900;
 	width: 6vw;
 	height: 4vh;
 	text-align: center;
-	left: 5vw;
-	top: 5vh;
+	left: 2vw;
+	top: 4vh;
 	border: 3px solid black;
 	border-radius: 25px;
 	background-color: white;
 	color: black;
 	opacity: 0.7;
-	-webkit-transition: border 0.2s ease-in-out;
+	/* -webkit-transition: border 0.2s ease-in-out;
 	-o-transition: border 0.2s ease-in-out;
-	transition: border 0.2s ease-in-out;
+	transition: border 0.2s ease-in-out; */
+}
+.HT_btn :hover{
+	transition: ease-out 0.3s;
+	background-color: #ffffff;
+	color: #34613f;
 }
 
 
@@ -611,13 +678,13 @@ h1 {
 
 /* 5페이지 ----------------------------------------------------*/
 .downintro {
-	background-color: white ;
+	background-color:  #ffffff ;
 
 }
 .outSide_Image_5{
 	position: relative;
 	width: 70vw;
-	height: 45vh;
+	height: 50vh;
 	bottom: 12vh;
 	left: 0;
 	right: 0;
@@ -631,7 +698,7 @@ h1 {
 .inSide_Img_5{
 	width: 22vw;
 	height: 34vh;
-	top: 11vh;
+	top: 16vh;
 	right: 6vw;
 	position: absolute;
 	background-color: rgb(242, 252, 111);
@@ -642,9 +709,9 @@ h1 {
 
 .section_container_5 {
 	width: 65vw;
-	height: 30vh;
+	height: 40vh;
 	max-width: 100%;
-	margin: 10vh auto;
+	margin: 4vh auto;
 	padding: 3vh 5vw;
 	overflow: hidden;
 	margin-top: 6vh;
@@ -654,17 +721,24 @@ h1 {
 	text-align: right;
 }
 .fab {
+	position: relative;
+	right: 78vw;
+	top: 18vh;
 	font-weight:400;
 	font-size: 2vw;
 	color: #a19999;
-	position: relative;
-	right: 78vw;
-	top: 15vh;
 }
 
 .fab fa-instagram{
 	width: 5vw;
 	height: 5vh;
+}
+
+.fas{
+	position: relative;
+	font-weight: 900;
+}
+.fas-hashtag{
 }
 
 
@@ -673,21 +747,65 @@ h1 {
 	text-align: center;
 }
 
-.fifthPage_thuimnail{
-	width: 55vh;
+.fifthPage_thumnail{
+	width: 35vw;
 	height: 15vh;
 	text-align: left;
 }
-.fifthPage_thuimnail .font2{
-	font-size: 2vh;	
-	margin-top: 1vh;
+.fifthPage_thumnail .font2{
+	font-size: 1vw;	
+	margin-top: 2.5vh;
+	margin: 2vh 7vw 2vh 0vw;
+	font-family: NotoSansKR;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.56;
+	letter-spacing: normal;
+	text-align: left;
+	color: #000000;
 }
+
+
+.section_link_5 {
+	font-size: 1.2vw;
+	font-family: NotoSansKR;
+	font-stretch: normal;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
+	margin-top: 8.5vh;
+	padding: 1.2vh 3vw;
+	letter-spacing: 0.1vw;
+	line-height: 1;
+	border: solid 3px #34613f;
+	color: #ffffff;
+	background-color: #4a7755;
+	box-shadow: 0 3px 6px 0
+		rgba(0,0,0,0.16);
+	border-radius: 0.5vw;
+	transition: ease-out 0.3s;
+	
+}
+.section_link_5:hover {
+	color: #34613f;
+	border-color: #34613f;
+	background-color: #ffffff;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+	border: solid 3px #34613f;
+	background-color: #ffffff;
+
+}
+
+
 .full_footer{
 	position: absolute;
 	width: 30vw;
 	left: 40vw;
 	height: 43vh;
-	top: 48vh;
+	top: 52vh;
 	/* margin-top: 13vh; */
 }
 .full_footer .footer_down{
@@ -696,12 +814,15 @@ h1 {
 }
 .full_footer .footer_down .underword{
     width: 30vw;
-    font-size: 0.8vw;
-	font-weight: bold;
+	font-size: 1rem;
+	font-family: NotoSansKR;
+	line-height: 1.25;
+	letter-spacing: normal;
+	font-weight: normal;
 	font-stretch: normal;
     font-style: normal; 
 	padding-top: 1vh;
-	color: gray;
+	color: #757575;
 }
 
 
